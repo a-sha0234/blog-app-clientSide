@@ -1,15 +1,17 @@
 export default function CommentCard(props) {
-  console.log(props);
+  let timeCreated = props.comments.createdAt;
+  let strTimeCreated = timeCreated.split("T");
+
   return (
     <div className="commentCard">
       <section className="commentCard__top">
-        <p>{props.comments.name}</p>
+        <p>name: {props.comments.name}</p>
       </section>
       <section className="commentCard__body">
-        <p>{props.comments.comment}</p>
+        <p>comment: {props.comments.comment}</p>
       </section>
       <section className="commentCard__bottom">
-        <p>{props.comments.createdAt}</p>
+        <p>posted: {strTimeCreated[0]}</p>
       </section>
     </div>
   );

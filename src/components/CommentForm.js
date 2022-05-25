@@ -2,16 +2,18 @@ import { useState, useEffect } from "react";
 import CommentCard from "./CommentCard";
 
 export default function CommentForm(props) {
-  const [submit, setSubmit] = useState(false);
+  const [submit, setSubmit] = useState(false); // track when comment is submitted
 
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([]); // holds comments for blog
 
   const [commentFormData, setCommentFormData] = useState({
+    // form data
     name: "",
     comment: "",
   });
 
   function handleChange(event) {
+    // handle change with every keystroke
     const { name, value } = event.target;
     setCommentFormData((prev) => {
       return {
@@ -22,7 +24,7 @@ export default function CommentForm(props) {
   }
 
   function handleSubmit(e) {
-    commentFormData.id = props.data.apiData._id;
+    commentFormData.id = props.data.apiData._id; // add current id of blog to each document in database
     e.preventDefault();
     //create a comment
     fetch("http://localhost:3002/add/comment", {
@@ -35,6 +37,7 @@ export default function CommentForm(props) {
     });
 
     setSubmit((prev) => {
+      // cause the tracker to change values
       return !prev;
     });
   }
@@ -51,7 +54,7 @@ export default function CommentForm(props) {
         setComments(comments);
       });
     });
-  }, [submit]);
+  }, [submit]); // this runs everytime the user presses the submit button
 
   return (
     <div>
@@ -59,13 +62,14 @@ export default function CommentForm(props) {
         return <CommentCard comments={comments} />;
       })}
       <form onSubmit={handleSubmit}>
-        <label>Name</label>
+        <label>Name:</label>
         <input
           name="name"
           value={commentFormData.name}
           onChange={handleChange}
         ></input>
         {/*  */}
+        <label>comment:</label>
         <textarea
           name="comment"
           value={commentFormData.comment}
