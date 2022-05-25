@@ -1,9 +1,11 @@
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="navbar">
       <ul>
-        <li>
-          <a href="/">Posts</a>
+        <li className="navbar__item">
+          <a href="/" className="navbar__link">
+            Posts
+          </a>
         </li>
       </ul>
     </nav>
