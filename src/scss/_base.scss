@@ -1,0 +1,25 @@
+// css reset
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// variables
+$background-color: rgb(48, 48, 48);
+$postLinkFont: rgb(48, 48, 48);
+$CardBackgroundFont: rgb(32, 32, 32);
+$cardFontColor: yellow;
+$fontStyle: "Roboto Flex", sans-serif;
+
+// mixins
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
