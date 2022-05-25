@@ -2,35 +2,18 @@ import { react, useEffect, useState } from "react";
 import Card from "../components/Card";
 
 export default function Home(props) {
-  const [apiPostData, setApiPostData] = useState([]);
+  const [apiPostData, setApiPostData] = useState([]); // hold api data
 
   const [isDataExist, setIsDataExist] = useState(false);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:3002/allposts", {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //   })
-  //     .then((result) => {
-  //       return result.json();
-  //     })
-  //     .then((posts) => {
-  //       setApiPostData(posts);
-  //     });
-  // }, []);
-
   useEffect(() => {
+    // check if api data exists
     if (props.apiData.length > 0) {
       setIsDataExist(true);
     } else {
       setIsDataExist(false);
     }
-  }, [props.apiData]);
-
-  
+  }, [props.apiData]); // runs everytime the data changes
 
   return (
     <div>
