@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Card from "./components/Card";
 import BlogDetails from "./components/BlogDetails";
+import "./scss/main.scss";
 
 function App() {
   const [postsData, setPostsData] = useState([]);
@@ -39,7 +40,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         {" "}
-        <Navbar />
+        <header>
+          <div className="appTitle">Blogs</div>
+          <Navbar />
+        </header>
       </div>
       <Routes>
         <Route path="/" element={<Home apiData={postsData} />}></Route>
