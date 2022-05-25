@@ -1,0 +1,88 @@
+body {
+  background-color: $background-color;
+}
+
+//navbar.js
+
+.appTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: yellow;
+  font-family: $fontStyle;
+}
+
+.navbar {
+  display: flex;
+
+  &__link {
+    background-color: yellow;
+    padding: 16px;
+    border-radius: 20px;
+    color: $postLinkFont;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 1000;
+    margin: 20px;
+  }
+
+  &__link:hover {
+    background-color: rgb(32, 32, 32);
+    color: $cardFontColor;
+  }
+
+  &_title {
+    display: inline;
+  }
+}
+
+// card.js
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.cardContainer {
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  margin: 20px;
+  border-radius: 10px;
+  min-width: 60%;
+
+  &__side {
+    background-color: yellow;
+    height: 100%;
+    width: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &__content {
+    color: $cardFontColor;
+    font-family: "Roboto Flex", sans-serif;
+    width: 100%;
+  }
+  &__title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__date {
+    // margin-left: 75%;
+    font-size: 0.9rem;
+    margin-left: 5%;
+  }
+}
+
+.cardContainer:hover {
+  .cardContainer__side {
+    background-color: yellowgreen;
+  }
+
+  border: 0.1px dotted yellowgreen;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    margin: 10px;
+  }
+}
