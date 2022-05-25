@@ -12,8 +12,6 @@ body {
 }
 
 .navbar {
-  display: flex;
-
   &__link {
     background-color: yellow;
     padding: 16px;
@@ -28,21 +26,15 @@ body {
     background-color: rgb(32, 32, 32);
     color: $cardFontColor;
   }
-
-  &_title {
-    display: inline;
-  }
 }
 
 // card.js
 .container {
-  display: flex;
   justify-content: center;
   width: 100%;
 }
 .cardContainer {
   background-color: rgb(32, 32, 32);
-  display: flex;
   margin: 20px;
   border-radius: 10px;
   min-width: 60%;
@@ -76,8 +68,9 @@ body {
   .cardContainer__side {
     background-color: yellowgreen;
   }
-
-  border: 0.1px dotted yellowgreen;
+  .cardContainer__content {
+    color: yellowgreen;
+  }
 }
 
 @media only screen and (max-width: 600px) {
