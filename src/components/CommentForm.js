@@ -61,24 +61,27 @@ export default function CommentForm(props) {
       {comments.map((comments) => {
         return <CommentCard comments={comments} />;
       })}
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          name="name"
-          value={commentFormData.name}
-          onChange={handleChange}
-        ></input>
-        {/*  */}
-        <label>comment:</label>
-        <textarea
-          name="comment"
-          value={commentFormData.comment}
-          onChange={handleChange}
-        ></textarea>
 
-        {/*  */}
+      <form onSubmit={handleSubmit} className="commentForm">
+        <div className="commentForm__formItems">
+          <label>Name:</label>
+          <input
+            name="name"
+            value={commentFormData.name}
+            onChange={handleChange}
+          ></input>
+          {/*  */}
+          <label>Comment:</label>
+          <textarea
+            name="comment"
+            value={commentFormData.comment}
+            onChange={handleChange}
+          ></textarea>
 
-        <button>post</button>
+          {/*  */}
+
+          <button className="commentForm__button">post</button>
+        </div>
       </form>
     </div>
   );
