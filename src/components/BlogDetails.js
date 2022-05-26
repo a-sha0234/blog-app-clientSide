@@ -9,16 +9,19 @@ export default function BlogDetails(props) {
   let updatedAt = props.apiData.updatedAt.split("T"); // store time and data blog was last updated
 
   return (
-    <div className="blogDetails">
-      <div className="blogDetails__top">
-        <h1>{props.apiData.title}</h1>
-        <h2>Author: {props.apiData.Author}</h2>
-        <p>Created at:{strTimeAndDataCreated[0]}</p>
-        <p>Last updated at: {updatedAt[0]}</p>
+    <div>
+      <div className="blogDetails">
+        <div className="blogDetails__top">
+          <h1>{props.apiData.title}</h1>
+          <h2>Author: {props.apiData.Author}</h2>
+          <p>Created at:{strTimeAndDataCreated[0]}</p>
+          <p>Last updated at: {updatedAt[0]}</p>
+        </div>
+
+        <section className="blogDetails__body">
+          <p>{props.apiData.blogtext}</p>
+        </section>
       </div>
-      <section className="blogDetails__body">
-        <p>{props.apiData.blogtext}</p>
-      </section>
 
       <section className="commentSection">
         {/* send blog data to comment form  */}
