@@ -12,7 +12,7 @@ function App() {
   const [isDataLoading, setIsDataLoading] = useState(); //
 
   useEffect(() => {
-    fetch("http://localhost:3002/allposts", {
+    fetch("https://blogapi-server.herokuapp.com/allposts", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

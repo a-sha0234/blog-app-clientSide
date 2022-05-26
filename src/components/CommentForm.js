@@ -27,7 +27,7 @@ export default function CommentForm(props) {
     commentFormData.id = props.data.apiData._id; // add current id of blog to each document in database
     e.preventDefault();
     //create a comment
-    fetch("http://localhost:3002/add/comment", {
+    fetch("https://blogapi-server.herokuapp.com/add/comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,13 +43,16 @@ export default function CommentForm(props) {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:3002/posts/${props.data.apiData._id}/comment`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    }).then((result) => {
+    fetch(
+      `https://blogapi-server.herokuapp.com/posts/${props.data.apiData._id}/comment`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    ).then((result) => {
       return result.json().then((comments) => {
         setComments(comments);
       });
