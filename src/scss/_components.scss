@@ -7,13 +7,13 @@ body {
 .appTitle {
   text-align: center;
   font-size: 2rem;
-  color: yellow;
+  color: $cardFontColor;
   font-family: $fontStyle;
 }
 
 .navbar {
   &__link {
-    background-color: yellow;
+    background-color: $cardFontColor;
     padding: 16px;
     border-radius: 20px;
     color: $postLinkFont;
@@ -40,7 +40,7 @@ body {
   min-width: 60%;
 
   &__side {
-    background-color: yellow;
+    background-color: $cardFontColor;
     height: 100%;
     width: 20px;
     border-top-left-radius: 10px;
@@ -58,7 +58,6 @@ body {
   }
 
   &__date {
-    // margin-left: 75%;
     font-size: 0.9rem;
     margin-left: 5%;
   }
@@ -73,6 +72,70 @@ body {
   }
 }
 
+//BlogDetails.js
+.blogDetails {
+  color: $cardFontColor;
+  font-family: $fontStyle;
+
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__body {
+    padding: 10px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+//CommentCard.js
+.commentCard {
+  background-color: rgba(105, 105, 105, 0.356);
+  border-radius: 10px;
+
+  color: $cardFontColor;
+  width: 40%;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+//commentCard.js
+.commentForm {
+  margin-top: 10px;
+  display: flex;
+  color: $cardFontColor;
+  font-family: $fontStyle;
+  justify-content: center;
+
+  &__formItems {
+    font-size: 1.4rem;
+
+    label,
+    button,
+    textarea,
+    input {
+      display: block;
+      font-size: 1.4rem;
+      margin: 5px;
+    }
+  }
+
+  &__button {
+    padding: 16px;
+    border-radius: 20px;
+    font-family: $fontStyle;
+    background-color: greenyellow;
+    border: none;
+    font-weight: 1000;
+  }
+
+  &__button:hover {
+    background-color: $cardFontColor;
+  }
+}
+
+// media query
 @media only screen and (max-width: 600px) {
   .navbar {
     justify-content: center;
