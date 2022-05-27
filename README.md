@@ -17,8 +17,8 @@ Live: https://blogapi-server.herokuapp.com/allposts
 4. [Screenshots](#screenshot)
 5. [Setup](#setup-paragraph)
 6. [Project Status](#status-paragraph)
-8. [Acknowledgements](#Acknowledgements-paragraph)
-9. [Contact](#contact-paragraph)
+7. [Acknowledgements](#Acknowledgements-paragraph)
+8. [Contact](#contact-paragraph)
 
 
 
