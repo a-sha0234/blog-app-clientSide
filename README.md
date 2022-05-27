@@ -16,11 +16,10 @@ Live: https://blogapi-server.herokuapp.com/allposts
 3. [Features](#features-paragraph)
 4. [Screenshots](#screenshot)
 5. [Setup](#setup-paragraph)
-6. [Usage](#usage-paragraph)
-7. [Project Status](#status-paragraph)
-8. [Room for improvements](#imporvements-paragraph)
-9. [Acknowledgements](#Acknowledgements-paragraph)
-10. [Contact](#contact-paragraph)
+6. [Project Status](#status-paragraph)
+7. [Room for improvements](#imporvements-paragraph)
+8. [Acknowledgements](#Acknowledgements-paragraph)
+9. [Contact](#contact-paragraph)
 
 
 
@@ -57,8 +56,7 @@ Then to start the application:
 npm start
 ```
 
-## Usage <a name="usage-paragraph"></a>
-The first paragraph text
+
 
 ## Status <a name="status-paragraph"></a>
 Currently in progress
