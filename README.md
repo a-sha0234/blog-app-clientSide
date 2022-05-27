@@ -17,7 +17,6 @@ Live: https://blogapi-server.herokuapp.com/allposts
 4. [Screenshots](#screenshot)
 5. [Setup](#setup-paragraph)
 6. [Project Status](#status-paragraph)
-7. [Room for improvements](#imporvements-paragraph)
 8. [Acknowledgements](#Acknowledgements-paragraph)
 9. [Contact](#contact-paragraph)
 
@@ -59,18 +58,12 @@ npm start
 
 
 ## Status <a name="status-paragraph"></a>
-Currently in progress
+project is completed 
 
-## Room for improvements <a name="imporvements-paragraph"></a>
 
-Room for improvement:
-1) Design of each page
-
-To do:
-1) add some screenshots of current projects in the portfolio page 
 
 ## Acknowledgements <a name="Acknowledgements-paragraph"></a>
-The first paragraph text
+This project was inspired from the odin project
 
 ## Contact <a name="Contact-paragraph"></a>
-Created by Arun Shaema, feel free to contact me 
+Created by Arun Sharma, feel free to contact me 
